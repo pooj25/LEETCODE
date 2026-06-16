@@ -1,14 +1,5 @@
-// Last updated: 16/06/2026, 17:49:35
-1class Solution {
-2    public boolean isIsomorphic(String s, String t) {
-3        for (int i = 0; i < s.length(); i++) {
-4            for (int j = i + 1; j < s.length(); j++) {
-5                if ((s.charAt(i) == s.charAt(j)) !=
-6                    (t.charAt(i) == t.charAt(j))) {
-7                    return false;
-8                }
-9            }
-10        }
-11        return true;
-12    }
-13}
+// Last updated: 16/06/2026, 18:05:25
+for p = 2:   21(22 − 1) = 6
+for p = 3:   22(23 − 1) = 28
+for p = 5:   24(25 − 1) = 496
+for p = 7:   26(27 − 1) = 8128.
