@@ -1,36 +1,24 @@
-// Last updated: 24/06/2026, 11:26:29
+// Last updated: 24/06/2026, 11:37:31
 1class Solution {
-2    public void sortColors(int[] nums) {
-3        int zero=0;
-4        int one=0;
-5        int two=0;
-6        for(int i=0;i<nums.length;i++){
-7            if(nums[i]==0){
-8                zero++;
-9            }
-10            else if(nums[i]==1){
-11                one++;
-12            }
-13            else{
-14                two++;
-15            }
-16        }
-17        int i=0;
-18        while(zero>0){
-19            nums[i]=0;
-20            i++;
-21            zero--;
-22        }
-23        while(one>0){
-24            nums[i]=1;
-25            i++;
-26            one--;
-27        }
-28        while(two>0){
-29            nums[i]=2;
-30            i++;
-31            two--;
-32        }
-33
-34    }
-35}
+2    public void setZeroes(int[][] matrix) {
+3        int m=matrix.length;
+4        int n=matrix[0].length;
+5        boolean row[]=new boolean[m];
+6        boolean col[]=new boolean[n];
+7        for(int i=0;i<m;i++){
+8            for(int j=0;j<n;j++){
+9                if(matrix[i][j]==0){
+10                    row[i]=true;
+11                    col[j]=true;
+12                }
+13            }
+14        }
+15        for(int i=0;i<m;i++){
+16            for(int j=0;j<n;j++){
+17                if(row[i]||col[j]){
+18                    matrix[i][j]=0;
+19                }
+20            }
+21        }
+22    }
+23}
